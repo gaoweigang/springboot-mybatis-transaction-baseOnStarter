@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="myproject" />
+        <module name="springboot-druid-baseOnStarter" />
+        <module name="springboot-druidandmybatis-baseOnStarter" />
+        <module name="springboot-mybatis-transaction-baseOnStarter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="myproject" target="1.6" />
+      <module name="springboot-druid-baseOnStarter" target="1.8" />
+      <module name="springboot-druidandmybatis-baseOnStarter" target="1.8" />
+      <module name="springboot-mybatis-transaction-baseOnStarter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

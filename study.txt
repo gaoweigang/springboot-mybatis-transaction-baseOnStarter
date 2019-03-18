@@ -1,0 +1,29 @@
+Starter POMs
+Starter POMs是可以包含到应用中的一个方便的依赖关系描述符集合。你可以获取所有Spring及相关技术的一站式服务，而
+不需要翻阅示例代码，拷贝粘贴大量的依赖描述符。例如，如果你想使用Spring和JPA进行数据库访问，只需要在你的项目中
+包含spring-boot-starter-data-jpa依赖，然后你就可以开始了。
+
+该starters包含很多你搭建项目，快速运行所需要的依赖，并提供一致的，管理的传递依赖集。
+
+名字有什么含义：所有的starters遵循一个相似的命名模式：spring-boot-starter-*,在这里*是一种特殊类型的应用程序。
+该命名结构旨在帮你找到需要的starter。很多IDEs集成的Maven允许你通过名称搜索依赖。例如，使用相应的Eclipse或STS
+插件，你可以简单地在POM编辑器中点击ctrl-space，然后输入“spring-boot-starter"可以获取一个完整列表。
+
+
+参考：https://www.jianshu.com/p/4247a16c3131
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

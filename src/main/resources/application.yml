@@ -1,0 +1,42 @@
+#因为项目引入的是基于starter的druid依赖，基于starter的MyBatis可以简化druid的配置，只需要如下配置即可,该配置使用Druid数据库连接池
+spring:
+    datasource:
+       druid:
+         #数据库连接配置
+         name: dev
+         url: jdbc:mysql://127.0.0.1:3306/dev?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+         username: root
+         password: 123456
+         # MYSQL 6+使用com.mysql.cj.jdbc.Driver
+         # MYSQL 5+使用com.mysql.jdbc.Driver
+         driver-class-name: com.mysql.cj.jdbc.Driver
+         #druid数据库连接池配置
+         initial-size: 10
+         max-active: 100
+         min-idle: 10
+         max-wait: 60000
+         pool-prepared-statements: true
+         max-pool-prepared-statement-per-connection-size: 20
+         time-between-eviction-runs-millis: 60000
+         min-evictable-idle-time-millis: 300000
+         validation-query: SELECT 1 FROM DUAL
+         test-while-idle: true
+         test-on-borrow: false
+         test-on-return: false
+         web-stat-filter.enabled: false
+         stat-view-servlet.enabled: false
+
+
+
+
+
+
+#1.因为项目引入的是基于starter的MyBatis依赖，基于starter的Mybatis可以简化mybatis的配置，yml中只需要如下配置即可。
+#2.这种配置等价于DataSouceConfig的配置，保留一处即可。
+#3.如果引入不是基于starter的myBatis依赖，则如下配置无效
+#4.仅仅在yml配置文件中添加如下配置还不够,运行会报找不到Mapper(即NoSuchBeanDefinitionException),
+#  因此还需要添加注解@MapperScan
+mybatis:
+    mapperLocations: classpath*:com/gwg/demo/mapper/*.xml
+    typeAliasesPackage: com.gwg.demo.model
+       
